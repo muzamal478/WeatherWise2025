@@ -24,7 +24,7 @@ Week 1 Task for Python Programming Internship at BKR Tech Solutions. This projec
    ```
 3. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements.txt-
    ```
 4. Add OpenWeatherMap API key:
    - Save key in `weather.py` (replace `YOUR_API_KEY`).
