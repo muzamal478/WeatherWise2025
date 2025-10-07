@@ -39,7 +39,7 @@ Week 2 Task for Python Programming Internship at BKR Tech Solutions. WeatherWise
 Run with city names (single or multiple):
 ```bash
 python weather.py Paris
-python weather.py Paris,Lahore,Tokyo --graph
+python weather.py Paris,London,Tokyo --graph
 ```
 Options:
 - `--graph`: Show temperature/humidity graphs.
