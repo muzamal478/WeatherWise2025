@@ -7,5 +7,7 @@ __pycache__/
 *.env
 *.key
 
-# Ignore backups
+# Ignore backups and outputs
 Backups/
+screenshots/
+data/
