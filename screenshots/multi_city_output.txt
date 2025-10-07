@@ -1,0 +1,24 @@
+WeatherWise: Paris
+Current Weather
+Temperature        11.84°C
+Humidity           90%
+Condition          Broken clouds
+Wind Speed         2.17 m/s
+Local Time         2025-10-07 06:31
+3-Day Forecast:
+Date        Avg Temp    Condition
+2025-10-07  11.63°C     Broken clouds
+2025-10-08  11.71°C     Overcast clouds
+2025-10-09  10.23°C     Clear sky
+WeatherWise: London
+Current Weather
+Temperature        11.84°C
+Humidity           90%
+Condition          Broken clouds
+Wind Speed         2.17 m/s
+Local Time         2025-10-07 06:31
+3-Day Forecast:
+Date        Avg Temp    Condition
+2025-10-07  11.63°C     Broken clouds
+2025-10-08  11.71°C     Overcast clouds
+2025-10-09  10.23°C     Clear sky
