@@ -204,6 +204,7 @@ def main():
     cities = [city.strip() for city in args.cities.split(",")]
     display_weather(cities, args.graph)
 
+
 if __name__ == "__main__":
     try:
         main()

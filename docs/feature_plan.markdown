@@ -4,9 +4,11 @@
 1. **Search by City Name**:
    - Input: User enters city name via CLI (e.g., `python weather.py London`).
    - Action: Query OpenWeatherMap `/weather` endpoint.
+
 2. **Current Weather**:
    - Display: Temperature (°C), humidity (%), weather condition (e.g., Clear), wind speed (m/s).
    - Format: Tabular output using `tabulate`, colored with `colorama`.
+
 3. **3-Day Forecast**:
    - Display: Daily summary (date, avg temperature, condition) for next 3 days.
    - Action: Query `/forecast` endpoint, aggregate data.
@@ -17,6 +19,7 @@
   - Parse JSON for temperature, humidity, condition, wind.
   - Format output with `tabulate` and `colorama`.
   - Fetch and summarize 3-day forecast.
+  
 - **Week 3**: Add error handling (e.g., invalid city, API errors), unit conversion (°C/°F).
 
 ## Expected Output Example
