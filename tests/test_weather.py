@@ -4,6 +4,7 @@
 
 import pytest
 import asyncio
+import aiohttp
 from weather import fetch_weather, fetch_forecast, load_config, save_config, load_search_history, save_search_history, check_weather_alerts
 
 @pytest.mark.asyncio
@@ -27,10 +28,10 @@ def test_load_config():
     assert config["units"] == "metric"
 
 def test_save_config():
-    config = {"default_city": "Karachi", "units": "imperial", "last_api_key": None}
+    config = {"default_city": "London", "units": "imperial", "last_api_key": None}
     save_config(config)
     loaded = load_config()
-    assert loaded["default_city"] == "Karachi"
+    assert loaded["default_city"] == "London"
     assert loaded["units"] == "imperial"
 
 def test_search_history():
