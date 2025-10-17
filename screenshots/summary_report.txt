@@ -1,0 +1,1 @@
+<rich.table.Table object at 0x000001CB671DB610>
