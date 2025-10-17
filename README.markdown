@@ -1,16 +1,20 @@
 # WeatherWise CLI App - Python Programming Internship
 
 ## Overview
-Week 2 Task for Python Programming Internship at BKR Tech Solutions. WeatherWise is a command-line tool using the OpenWeather API to fetch real-time weather data. Features include city search history, multi-city weather fetching, visualizations, time zone support, and weather alerts. Fixed Unicode encoding issues for file output.
+Week 3 Task for Python Programming Internship at BKR Tech Solutions. WeatherWise is a command-line tool using the OpenWeather API with asynchronous data fetching, rich visualizations, user configurations, data exports, enhanced CLI, and automated testing. Fixed previous 401 API and Unicode encoding errors.
 
 ## Project Structure
 - `weather.py`: Main script with all features.
-- `requirements.txt`: Dependencies (`requests`, `tabulate`, `colorama`, `argparse`, `matplotlib`, `pytz`, `python-dotenv`).
+- `config.yaml`: User preferences (default city, units).
+- `requirements.txt`: Dependencies (`aiohttp`, `requests-cache`, `rich`, `pandas`, `pyyaml`, `pytest`, `pytest-asyncio`, `python-dotenv`).
 - `.env`: Store API key (e.g., `API_KEY=your_key_here`).
+- `tests/test_weather.py`: Unit and integration tests.
+- `.github/workflows/ci.yml`: GitHub Actions CI workflow.
 - `docs/research_findings.md`: API research from Week 1.
 - `docs/feature_plan.md`: Feature plan from Week 1.
-- `screenshots/`: Outputs (`multi_city_output.png`, `temp_graph.png`, `humidity_graph.png`, `alert_example.png`).
-- `data/search_history.txt`: Stores city search history.
+- `screenshots/`: Outputs (`multi_city_rich.png`, `export_csv.png`, `summary_report.png`, `alert_rich.png`).
+- `data/search_history.txt`: City search history.
+- `exports/`: Exported files (`weather_data.csv`, `weather_data.json`).
 - `.gitignore`: Ignores virtual env, sensitive files.
 
 ## Installation
@@ -36,42 +40,46 @@ Week 2 Task for Python Programming Internship at BKR Tech Solutions. WeatherWise
    - Get key from [OpenWeatherMap](https://openweathermap.org/api).
 
 ## Usage
-Run with city names (single or multiple):
+Run commands with subparsers:
 ```bash
-python weather.py Paris
-python weather.py Paris,London,Tokyo --graph
+python weather.py fetch Paris,London --graph --units metric
+python weather.py export Paris --type csv --file weather_data.csv
+python weather.py summary London
+python weather.py config --default-city Karachi --units imperial
+python weather.py history
 ```
-Options:
-- `--graph`: Show temperature/humidity graphs.
-- `--history`: View last 5 searched cities.
-- `--clear-history`: Clear search history.
 
 ## Example Output
 ```
 WeatherWise: Paris
-╒═══════════════════╤══════════════════╕
-│ Current Weather   │                  │
-╞═══════════════════╪══════════════════╡
-│ Temperature       │ 10.06°C          │
-│ Humidity          │ 94%              │
-│ Condition         │ Overcast clouds  │
-│ Wind Speed        │ 0.54 m/s         │
-│ Local Time        │ 2025-10-07 07:19 │
-╘═══════════════════╧══════════════════╛
-
+┏━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric          ┃ Value                 ┃
+┡━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Temperature     │ 10.06°C               │
+│ Humidity        │ 94%                   │
+│ Condition       │ ☁️ Overcast clouds    │
+│ Wind Speed      │ 0.54 m/s              │
+│ Local Time      │ 2025-10-14 22:01      │
+└─────────────────┴───────────────────────┘
 3-Day Forecast:
-╒════════════╤════════════╤═════════════════╕
-│ Date       │ Avg Temp   │ Condition       │
-╞════════════╪════════════╪═════════════════╡
-│ 2025-10-07 │ 10.14°C    │ Overcast clouds │
-│ 2025-10-08 │ 14.39°C    │ Overcast clouds │
-│ 2025-10-09 │ 12.22°C    │ Clear sky       │
-╘════════════╧════════════╧═════════════════╛
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
+┃ Date       ┃ Avg Temp   ┃ Condition           ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
+│ 2025-10-15 │ 10.14°C    │ ☁️ Overcast clouds  |
+│ 2025-10-16 │ 14.39°C    │ ☁️ Overcast clouds  │
+│ 2025-10-17 │ 12.22°C    │ ☀️ Clear sky        │
+└────────────┴────────────┴─────────────────────┘
 ```
 
 ## API Setup
 - Register at [OpenWeatherMap](https://openweathermap.org/api).
 - Store API key in `.env` to avoid hardcoding.
+
+## Testing
+Run tests:
+```bash
+pytest tests/test_weather.py -v
+```
 
 ## Author
 Muzamil Asghar  

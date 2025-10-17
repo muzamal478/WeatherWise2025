@@ -6,3 +6,7 @@ __pycache__/
 # Ignore sensitive data
 *.env
 *.key
+
+# Ignore backups and outputs
+Backups/
+weather_cache.sqlite

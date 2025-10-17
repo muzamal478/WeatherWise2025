@@ -4,3 +4,10 @@ colorama
 matplotlib
 pytz
 python-dotenv
+aiohttp
+requests-cache
+rich
+pandas
+pyyaml
+pytest
+pytest-asyncio
