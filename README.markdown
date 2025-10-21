@@ -1,7 +1,7 @@
 # WeatherWise CLI App - Python Programming Internship
 
 ## Overview
-Week 3 Task for Python Programming Internship at BKR Tech Solutions. WeatherWise is a command-line tool using the OpenWeather API with asynchronous data fetching, rich visualizations, user configurations, data exports, enhanced CLI, and automated testing. Fixed previous 401 API and Unicode encoding errors.
+Week 4 Task for Python Programming Internship at BKR Tech Solutions. WeatherWise is a command-line tool using the OpenWeather API. Week 4 focused on showcasing the project on LinkedIn and Facebook, tagging BKR Tech Solutions, and setting up Fiverr/Upwork profiles.
 
 ## Project Structure
 - `weather.py`: Main script with all features.
@@ -16,6 +16,8 @@ Week 3 Task for Python Programming Internship at BKR Tech Solutions. WeatherWise
 - `data/search_history.txt`: City search history.
 - `exports/`: Exported files (`weather_data.csv`, `weather_data.json`).
 - `.gitignore`: Ignores virtual env, sensitive files.
+- `portfolio/`: Social media posts, video demo, freelancer profiles.
+- `submission/`: PDF for Google Classroom.
 
 ## Installation
 1. Clone the repository:
@@ -80,6 +82,13 @@ Run tests:
 ```bash
 pytest tests/test_weather.py -v
 ```
+## Social Media Showcase
+- **LinkedIn Post**: https://www.linkedin.com/posts/muzamalasgharofficial  
+- **Facebook Post**: https://www.facebook.com/muzamalasgharofficial/  
+- **Freelancer Profiles**:  
+  - Fiverr: https://www.fiverr.com/muzamilcreator?public_mode=true
+  - Upwork: https://upwork.com/freelancers/muzamala
+
 
 ## Author
 Muzamil Asghar  

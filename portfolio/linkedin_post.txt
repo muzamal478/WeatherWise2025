@@ -1,0 +1,9 @@
+🚀 Just completed my Python Programming Internship at @BKR Tech Solutions with WeatherWise CLI App! 🌦️ From API setup to async fetching, rich visuals, and exports—learned a ton!
+
+Week 3 highlights: 70% faster responses with aiohttp, rich tables with weather icons ☀️🌧️, yaml configs, and CI testing. Built for real-world use!
+
+[Attach: multi_city_rich.png, export_csv.png, video_demo.mp4]
+
+Check the repo: https://github.com/muzamal478/WeatherWise2025
+
+#InternshipExperience #Portfolio #SkillGrowth #LearningJourney #BKRTechSolutions #Python #WeatherApp #AsyncProgramming #DataVisualization
